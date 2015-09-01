@@ -13,6 +13,10 @@ def newton_sq_rt(root_of):
     apxroot = root_of/2
     n = 0
     while abs(root_of - apxroot**2) > 0.01:
+        if n == 0:
+            print("{} iteration,  guess is {}".format(n+1, apxroot))
+        else:
+            print("{} iterations, guess is {}".format(n+1, apxroot))
         apxroot  = (apxroot + root_of/apxroot)/2
         n += 1
     return apxroot
